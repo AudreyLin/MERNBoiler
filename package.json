@@ -1,0 +1,30 @@
+{
+  "name": "mernboiler2022",
+  "version": "1.0.0",
+  "description": "A quick MERN boiler plate for browser sites and applications",
+  "main": "server.js",
+  "scripts": {
+    "start": "NODE_ENV=production node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [
+    "boilerPlate",
+    "MERN"
+  ],
+  "author": "Audrey Delgado",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-validator": "^6.14.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15"
+  }
+}
