@@ -1,0 +1,11 @@
+.navDrawer {
+     position: fixed;
+     right: 0;
+     top: 4.5rem;
+     z-index:100;
+     height: 100vh;
+     width: 45%;
+     background: var(--primary);
+     color: var(--blue-jeans);
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}

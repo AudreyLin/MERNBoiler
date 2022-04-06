@@ -16,6 +16,7 @@ Everything can be edited to suit your preferences.  I just made this one so I do
   - Responsive Navigation
   - customizable
   - scalable 
+  - preset, but customizeable light/dark theme toggle
 
 ## Acknowledgements
  - [Brad Traversy Udemy Course](https://www.udemy.com/share/101WIo3@66V0VcDfhzVyIAwG7vHEEqVFlCTus0K5Xr-gbkQw4sPXwdNZTH9cpdHmAwsKxhv6/)
@@ -23,6 +24,7 @@ Everything can be edited to suit your preferences.  I just made this one so I do
  - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
  - [Awesome README](https://github.com/matiassingers/awesome-readme)
  - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+ - [Kevin Powell, Scrimba, FrontendMentor.io tutorial](https://scrimba.com/learn/spacetravel)
 
 ## Generate Favicons
 
@@ -30,6 +32,8 @@ Everything can be edited to suit your preferences.  I just made this one so I do
   2. Extract the package download into "./frontend/public" directory
   3. Insert the given code into the head section of the "./frontend/public/index.html" file
 
+## Light/Dark Theme Toggle Customization
+You can change your theme colors in the "./frontend/src/index.css" file's CSS variables
 
 ## Google Fonts
 

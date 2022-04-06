@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-const morgan = require('morgan');
 const dotenv = require('dotenv');
+const morgan = require('morgan');
 
 //Dotenv Config & Load Environment Variables
 dotenv.config({ path: '../config/.env'});

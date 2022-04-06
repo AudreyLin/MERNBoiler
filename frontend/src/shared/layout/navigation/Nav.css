@@ -1,0 +1,23 @@
+.navBar {
+    display: none;
+}
+
+.navDrawer {
+    height: 100%;
+}
+
+
+@media (min-width: 768.5px) {
+    .navMenuButton {
+        display: none;
+    }
+
+    .navDrawer {
+        display: none;
+    }
+   
+    .navBar {
+        display: block;
+    }
+
+}
