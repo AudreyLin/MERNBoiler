@@ -17,6 +17,7 @@ Everything can be edited to suit your preferences.  I just made this one so I do
   - customizable
   - scalable 
   - preset, but customizeable light/dark theme toggle
+  - Set up for the react@18 and react-dom@18 update
 
 ## Acknowledgements
  - [Brad Traversy Udemy Course](https://www.udemy.com/share/101WIo3@66V0VcDfhzVyIAwG7vHEEqVFlCTus0K5Xr-gbkQw4sPXwdNZTH9cpdHmAwsKxhv6/)
