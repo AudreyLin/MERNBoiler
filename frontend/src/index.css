@@ -3,53 +3,79 @@
 /*-----------------------*/
 :root {
   /*Set the Default Values*/
-  --primary: var(--oxford-blue);
+  --primary: var(--xiketic);
   --primary-text: var(--azure);
-  --secondary: ;
-  --secondary-text: ;
+  --secondary: var(--azure);
+  --secondary-text: var(--baby-blue-eyes);
   --success: var(--forest-green-web);
   --error: var(--vermillion);
+  --error-background: var(--baby-pink);
 
-/*You can set your own colors*/
-  --rich-black-fogra: #0B1A2A;
+  /*You can set your own colors*/
+
+  --rich-black-fogra: #0b1a2a;
   --oxford-blue: #0a1a2c;
   --azure: #007fff;
-  --blue-jeans: #2DAEF3; 
+  --blue-jeans: #2daef3;
   --baby-blue-eyes: #99ccff;
-  --gainsboro: #DDE3E3;
   --gunmetal: #2f3538;
-  --vermillion: #E42311;
-  --forest-green: #2A8522;
+  --vermillion: #e42311;
+  --baby-pink: #ffd1d1;
+  --forest-green: #2a8522;
 
-/*------------------------*/
-/*       Font Sizes       */
-/*------------------------*/
+  --tangerine: #f18701;
+  --light-periwinkle: #c8d1de;
+  --oxford-blue-2: #0c1541;
+  --raisin-black: #272627;
+  --nickel: #747f7e;
+  --dark-blue-gray: #5f6a85; /*purplish Gray*/
+  --space-cadet: #2b2c40;
+  --lavendar-web: #f3ecff;
 
---fs-900: 9.375rem;
---fs-800: 6.25rem;
---fs-700: 3.5rem;
---fs-600: 2rem;
---fs-500: 1.75rem;
---fs-400: 1.25rem;
---fs-300: 1rem;
---fs-200: 0.875rem;
+  --xiketic: #121327;
+  --saffron: #f6c225;
 
-/*-------------------*/
-/*  Font Families    */
-/*-------------------*/
---ff-sans-poppins: 'poppins', sans-serif
+  /*------------------------*/
+  /*       border-radius    */
+  /*------------------------*/
+  --border-radius: 15px;
+
+  /*------------------------*/
+  /*       Font Sizes       */
+  /*------------------------*/
+
+  --fs-900: 9.375rem;
+  --fs-800: 6.25rem;
+  --fs-700: 3.5rem;
+  --fs-600: 2rem;
+  --fs-500: 1.75rem;
+  --fs-400: 1.25rem;
+  --fs-300: 1rem;
+  --fs-200: 0.875rem;
+
+  /*-------------------*/
+  /*  Font Families    */
+  /*-------------------*/
+  --ff-sans-poppins: 'poppins', sans-serif;
+
+  /*------------------*/
+  /*     gap         */
+  /*-----------------*/
+  --gap: 15px;
+  --grid-gap: 15px;
+  --text-gap: 10px;
 }
 
-
- /*Creating a Dark Theme*/
- :root[theme = 'dark'] {
+/*Creating a Dark Theme*/
+:root[theme='dark'] {
   --primary: var(--rich-black-fogra);
   --primary-text: var(--azure);
   --secondary: ;
   --secondary-text: ;
   --success: var(--forest-green-web);
-  --error: var(--vermillion)
- }
+  --error: var(--vermillion);
+  --error-background: var(--baby-pink);
+}
 
 /*------------*/
 /*    Reset   */
@@ -77,9 +103,11 @@ picture {
 }
 
 body {
+  background-color: var(--lavendar-web);
   font-family: var(--ff-sans-poppins);
   font-size: var(--fs-400);
-  min-height: 100%;
+  min-height: 100vh;
+  max-width: 100vw;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -140,8 +168,59 @@ select {
 .container {
   padding-inline: 0 2em;
   margin-inline: auto;
-  max-width: 80rem;
+  max-width: 45rem;
 }
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+section {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*--HERO SECTION --*/
+/* -- https://www.developerdrive.com/full-page-hero-image-html-css/ --*/
+.heroSection {
+  position: relative;
+
+  /* margin-top here is only bc I set the main to be margin-top 5rem and this removes the scrolling caused by the clash in those settings */
+  margin-top: -5rem;
+  width: 98vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(60%);
+}
+
+.heroContent {
+  padding: 10%;
+  width: min(100% - 2rem, 950px);
+  line-height: 1.5;
+}
+
+.heroSection h1 h2 {
+  font-size: clamp(40px, 5vw, 30px);
+}
+
+/* -----End Hero Section ----- */
 
 /* React-Transition-Group */
 .slide-in-right-enter {
@@ -173,29 +252,54 @@ select {
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0,0,0,0);
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
 }
 
 /*-------Typography---------*/
-.ff-sans-poppins { font-family: var(--ff-sans-poppins);}
+.ff-sans-poppins {
+  font-family: var(--ff-sans-poppins);
+}
 
+.letter-spacing-1 {
+  letter-spacing: 4.75px;
+}
+.letter-spacing-2 {
+  letter-spacing: 2.7px;
+}
+.letter-spacing-3 {
+  letter-spacing: 2.35px;
+}
 
-.letter-spacing-1 { letter-spacing: 4.75px;}
-.letter-spacing-2 { letter-spacing: 2.7px;}
-.letter-spacing-3 { letter-spacing: 2.35px;}
+.uppercase {
+  text-transform: uppercase;
+}
 
-.uppercase { text-transform: uppercase;}
-
-.ff-900 { font-size: var(--fs-900);}
-.ff-800 { font-size: var(--fs-800);}
-.ff-700 { font-size: var(--fs-700);}
-.ff-600 { font-size: var(--fs-600);}
-.ff-500 { font-size: var(--fs-500);}
-.ff-400 { font-size: var(--fs-400);}
-.ff-300 { font-size: var(--fs-300);}
-.ff-200 { font-size: var(--fs-200);}
+.ff-900 {
+  font-size: var(--fs-900);
+}
+.ff-800 {
+  font-size: var(--fs-800);
+}
+.ff-700 {
+  font-size: var(--fs-700);
+}
+.ff-600 {
+  font-size: var(--fs-600);
+}
+.ff-500 {
+  font-size: var(--fs-500);
+}
+.ff-400 {
+  font-size: var(--fs-400);
+}
+.ff-300 {
+  font-size: var(--fs-300);
+}
+.ff-200 {
+  font-size: var(--fs-200);
+}
 
 .fs-900,
 .fs-800,
@@ -203,5 +307,3 @@ select {
 .fs-600 {
   line-height: 1.1;
 }
-
-

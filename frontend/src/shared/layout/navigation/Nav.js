@@ -18,7 +18,7 @@ const Nav = (props) => {
         setNavIsOpen(false);
     }
 
-    //Listens to browser resize event & if the navDrawer State is open, then it resets the state to close the navDrawer
+    //Listens to browser resize event & if the navDrawer State is open, then it sets the state to close the navDrawer.
     useEffect(()=> {
         const resizeNavStateHandler = () => {
             if(navIsOpen){
